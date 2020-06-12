@@ -4,13 +4,20 @@ $.getJSON("/articles", function(data){
     }
 });
 
-document.getElementById('button').addEventListener('click', function(){
+//modal
+document.getElementById('scrape-button').addEventListener('click', function(){
   document.querySelector('.bg-modal').style.display = 'flex';
 });
 
 document.querySelector('.close').addEventListener('click', function(){
   document.querySelector('.bg-modal').style.display = 'none';
 });
+//modal
+
+//modal close button
+document.querySelector('.btnClose').addEventListener('click', function(){
+  document.querySelector('.bg-modal').style.display = 'none';
+})
 
 $(document).on("click", "p", function() {
     $("#notes").empty();
