@@ -3,44 +3,54 @@
     <head>
         <meta charset="UTF-8">
         <title>News Scraper</title>
-        <style>
-            body { background-color: #F2F6D0 }
-            #wrapper {
-              width: 960px;
-              margin-left: auto;
-              margin-right: auto;
-              padding-top: 5%;
-              padding-bottom: 5%;
-            }
-            #articles {
-              display: inline-block;
-              overflow: auto;
-              width: 60%;
-              height: 700px;
-            }
-            #notes {
-              float: center;
-              width: 30%;
-            }
-            textarea, input {
-              display: block;
-              width: 100%;
-              background-color: #FCF5C7;
-            }
-            input {
-              height: 32px;
-              font-size: 14px;
-            }
-            textarea {
-              height: 250px;
-              font-size: 18px;
-            }
-          </style>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="indexstyle.css">  
         </head>
+
         <body>
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+            <a class="navbar-brand" href="#">Mongo Scraper</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">Saved Articles</a>
+                <button class="btn btn-danger navbar-btn" id="button">Scrape New Articles!</button>
+              </div>
+            </div>
+          </nav>
+
+          <!--Jumbotron--> 
+          <div class="jumbotron jumbotron-fluid bg-dark" id="jumbotron">
+            <div class="jumbotron-background">
+              <img src="newspaper.jpg" class="blur">
+            </div>
+            
+            <div class="container text-white">
+              <br>
+              <br>
+              <br>
+              <br>
+              <h1 class="display-4">MONGO SCRAPER</h1>
+              <p class="lead">WALL STREET JOURNAL EDITION</p>
+            </div>
+          </div>
+
+          <!--modal-->
+          <div class="bg-modal">
+            <div class="modal-content">
+              <div class="close">+</div>
+              <br>
+              <h2>Added 20 new articles!</h2>
+            </div>
+          </div>
+
+          <!--body for saved articles-->
           <div id="wrapper">
-            <h1>Socratic Seminar</h1>
-            <h2><i>Voice your opinion about this article. What do you think about it?</i></h2>
             <div id="articles"></div>
             <div id="notes"></div>
           </div>

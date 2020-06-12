@@ -14,8 +14,8 @@ app.use(express.static("public"));
 mongoose.connect("mongodb://localhost/newsScraper", {useNewUrlParser: true});
 
 app.get("/scrape", function(req,res){
-    //add in stuff
-    axios.get("").then(function(response){
+    //scraping from WSJ website
+    axios.get("https://www.wsj.com").then(function(response){
         var $ = cheerio.load(response.data);
 
         $("article h2").each(function(i, element){

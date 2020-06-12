@@ -1,16 +1,25 @@
 {
-  "name": "axios",
+  "name": "web-scraping",
   "version": "1.0.0",
   "description": "A web app that lets users view and leave comments on the latest news - scraped from other sites - using Mongoose and Cheerio.",
-  "main": "index.js",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "mongoose": "^5.9.18"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ChristineDang/Web-Scraping.git"
   },
-  "author": "",
+  "author": "Christine Dang",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ChristineDang/Web-Scraping/issues"
