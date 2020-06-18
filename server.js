@@ -15,6 +15,9 @@ mongoose.connect("mongodb://localhost/articlesdb", {useNewUrlParser: true});
 //Notification about a db connect change, but using the one taught in class because it still works:
 // mongoose.connect("mongodb://localhost/articlesdb", {useUnifiedTopology: true});
 
+var MONGODB_URI = process.env.MONGODB_URI || 'mongodb://<dangc101>:<password1>@ds125716.mlab.com:25716/heroku_5g4qbt5r';
+    mongoose.connect(MONGODB_URI);
+
 app.get("/scrape", function(req,res){
     //scraping from WSJ website
     axios.get("https://www.wsj.com").then(function(response){
