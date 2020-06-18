@@ -84,22 +84,29 @@ body {
 }
 
 #wrapper {
-  width: 960px;
+  width: auto;
   margin-left: auto;
   margin-right: auto;
   padding-top: 5%;
   padding-bottom: 5%;
 }
+
 #articles {
   display: inline-block;
+  margin-left: 20%;
+  margin-right: 30%;
   overflow: auto;
   width: 60%;
   height: 700px;
 }
+
+
 #notes {
   float: center;
   width: 30%;
 }
+
+
 textarea, input {
   display: block;
   width: 100%;

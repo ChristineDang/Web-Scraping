@@ -11,15 +11,15 @@
         <body>
           <!--Navbar-->
           <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
-            <a class="navbar-brand" href="#">Mongo Scraper</a>
+            <a class="navbar-brand" href="index.html">Mongo Scraper</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Saved Articles</a>
-                  <a class="btn btn-danger navbar-btn" id="scrape-button">Scrape New Articles!</a>
+                <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="/savedarticles.html">Saved Articles</a>
+                  <!-- <a class="btn btn-danger navbar-btn" id="scrape-button">Scrape New Articles!</a> -->
                   <button class="btn btn-danger navbar-btn" id="clear-btn">Clear Articles!</button>
               </div>
             </div>
@@ -41,21 +41,30 @@
             </div>
           </div>
 
-          <!--modal-->
+          <!--adding note modal for each article:
+          Once the save article button displays the chosen article onto this document,
+          the #saved-articles will contain a button that triggers the modal to display,
+          allows user to add a note, and save it to the html page & mongodb-->
+          <!--create a second clear-btn for each article saved-->
+
+          <!--<div id="saved-articles></div>-->
           <div class="bg-modal">
             <div class="modal-content">
               <div class="close">+</div>
               <br>
               <br>
-              <h2>Added 20 new articles!</h2>
+              <form action="">
+                <input type="text" placeholder="Insert Note here">
+                <a href="" class="button">submit</a>
+              </form>
               <br>
-                <div class="btnClose">
+                <!-- <div class="btnClose">
                   <button type="button" class="btn btn-primary">Ok</button>
-                </div>
+                </div> -->
             </div>
           </div>
 
-          <!--article container-->
+          <!--saved article container-->
           <div class="container-fluid article container">
             <div class="alert alert-warning text-center">
               <h4>Uh oh. Looks like you don't have any saved articles.</h4>
@@ -71,14 +80,14 @@
                 </h4>
               </div>
             </div>
-
           </div>
 
-          <!--body for saved articles-->
-          <div id="wrapper">
-            <div id="articles"></div>
-            <div id="notes"></div>
-          </div>
+          <div id="saved-articles"></div>
+
+       <!--body for saved articles-->
+          <!-- <div id="wrapper"> -->
+            <!-- <div id="notes"></div>
+          </div> -->
           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
           <script src="app.js"></script>
     </head>
