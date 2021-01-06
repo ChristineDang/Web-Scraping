@@ -4,7 +4,7 @@
   "description": "A web app that lets users view and leave comments on the latest news - scraped from other sites - using Mongoose and Cheerio.",
   "main": "server.js",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "cheerio": "^1.0.0-rc.3",
     "express": "^4.17.1",
     "express-handlebars": "^4.0.4",
